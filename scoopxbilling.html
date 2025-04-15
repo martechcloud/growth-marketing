@@ -192,12 +192,12 @@
                 <div data-i18n="Misc">Account</div>
               </a>
               <ul class="menu-sub">
-                <li class="menu-item active">
+                <li class="menu-item">
                   <a href="scoopxsettings.html" class="menu-link">
                     <div data-i18n="Under Maintenance">Settings</div>
                   </a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item active">
                   <a href="scoopxbilling.html" class="menu-link">
                     <div data-i18n="Error">Billing</div>
                   </a>
@@ -413,246 +413,28 @@
 
 
 
-          <div class="content-wrapper">
+          <div class="content-wrapper d-flex align-items-start justify-content-top">
             <!-- Content -->
-            <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="fw-bold py-3 mb-4">
-                <span class="text-muted fw-light">Account / </span> Settings
-              </h4>
-
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="row">
-                    <div class="col-md-6 col-12 mb-md-0 mb-4">
-                      <div class="card">
-                        <h5 class="card-header">Account Status</h5>
-                        <div class="card-body">
-                          <!-- Connections -->
-                          <div class="d-flex mb-3">
-                            <div class="flex-shrink-0">
-                              <img src="img/icons/brands/8.png" alt="google" class="me-3" height="30" />
-                            </div>
-                            <div class="flex-grow-1 row">
-                              <div class="col-9 mb-sm-0 mb-2">
-                                <h6 id="primaryprofileusername" class="mb-0"></h6>
-                                <small id="primaryprofilerole" class="text-muted"></small>
-                                <div><small class="text-muted" id="MartechIP"></small></div>
-                              </div>
-                              <div class="col-3 text-end">
-                                <div class="form-check form-switch">
-                                  <input class="form-check-input float-end" type="checkbox" role="switch" checked disabled/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- /Connections -->
-                        </div>
-                      </div>
-                      &nbsp;
-                      <div class="card">
-                        <h5 class="card-header">Account Details</h5>
-                        <div class="card-body">
-                          <!-- Connections -->
-                          <div class="d-flex mb-3">
-                            <div class="flex-grow-1 row">
-                              <div class="col-9 mb-sm-0 mb-2">
-                                <h6 class="mb-3" id="MartechName"><i class="fas fa-user"></i> <span></span></h6>
-                                <h6 class="mb-3" id="MartechEmail"><i class="fas fa-envelope"></i> <span></span></h6>
-                                <h6 class="mb-3" id="MartechPhone"><i class="fas fa-phone"></i> <span></span></h6>
-                                <h6 class="mb-3" id="industry"><i class="fas fa-internet"></i> <span></span></h6>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- /Connections -->
-                        </div>
-                      </div>
-                      &nbsp;
-                      <div class="card">
-                        <h5 class="card-header">Advanced Details</h5>
-                        <div class="card-body">
-                          <!-- Connections -->
-                          <div class="d-flex mb-3">
-                            <div class="flex-grow-1 row">
-                              <div class="col-9 mb-sm-0 mb-2">
-                                <h6 class="mb-3" id="first_primary"><i class="fas fa-user"></i> <span></span></h6>
-                                <h6 class="mb-3" id="second_primary"><i class="fas fa-user"></i> <span></span></h6>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- /Connections -->
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-12">
-                      <div class="card">
-                        <h5 class="card-header">Integrated Channels</h5>
-                        <div class="card-body">
-                          <!-- Social Accounts -->
-                          <div class="d-flex mb-3">
-                            <div class="flex-shrink-0">
-                              <img
-                                src="img/icons/brands/gmail.png"
-                                alt="facebook"
-                                class="me-3"
-                                height="30"
-                              />
-                            </div>
-                            <div class="flex-grow-1 row">
-                              <div class="col-8 col-sm-7 mb-sm-0 mb-2">
-                                <h6 class="mb-0">Email</h6>
-                                <a href="mailto:helpdesk.martechcloud@gmail.com" >helpdesk.martechcloud@gmail.com</a>
-                              </div>
-                              <div class="col-4 col-sm-5 text-end">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input float-end" type="checkbox" role="switch" checked disabled/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="d-flex mb-3">
-                            <div class="flex-shrink-0">
-                              <img
-                                src="img/icons/brands/sms.png"
-                                alt="twitter"
-                                class="me-3"
-                                height="30"
-                              />
-                            </div>
-                            <div class="flex-grow-1 row">
-                              <div class="col-8 col-sm-7 mb-sm-0 mb-2">
-                                <h6 class="mb-0">SMS</h6>
-                                <small class="text-muted">Not Connected</small>
-                              </div>
-                              <div class="col-4 col-sm-5 text-end">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input float-end" type="checkbox" role="switch" unchecked disabled/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="d-flex mb-3">
-                            <div class="flex-shrink-0">
-                              <img
-                                src="img/icons/brands/whatsapp.png"
-                                alt="dribbble"
-                                class="me-3"
-                                height="30"
-                              />
-                            </div>
-                            <div class="flex-grow-1 row">
-                              <div class="col-8 col-sm-7 mb-sm-0 mb-2">
-                                <h6 class="mb-0">WhatsApp</h6>
-                                <a href="tel:+918208710562" >+918208710562</a>
-                              </div>
-                              <div class="col-4 col-sm-5 text-end">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input float-end" type="checkbox" role="switch" checked disabled/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="d-flex mb-3">
-                            <div class="flex-shrink-0">
-                              <img
-                                src="img/icons/brands/instagram.png"
-                                alt="instagram"
-                                class="me-3"
-                                height="30"
-                              />
-                            </div>
-                            <div class="flex-grow-1 row">
-                              <div class="col-8 col-sm-7 mb-sm-0 mb-2">
-                                <h6 class="mb-0">instagram</h6>
-                                <a href="https://www.instagram.com/sai_thombare/" target="_blank">@sai_thombare</a>
-                              </div>
-                              <div class="col-4 col-sm-5 text-end">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input float-end" type="checkbox" role="switch" checked disabled/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="d-flex">
-                            <div class="flex-shrink-0">
-                              <img
-                                src="img/icons/brands/github.png"
-                                alt="behance"
-                                class="me-3"
-                                height="30"
-                              />
-                            </div>
-                            <div class="flex-grow-1 row">
-                              <div class="col-8 col-sm-7 mb-sm-0 mb-2">
-                                <h6 class="mb-0">Others</h6>
-                                <small class="text-muted">Not Connected</small>
-                              </div>
-                              <div class="col-4 col-sm-5 text-end">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input float-end" type="checkbox" role="switch" unchecked disabled/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- /Social Accounts -->
-                        </div>
-                      </div>
-                      &nbsp;
-                      <div class="card">
-                        <h5 class="card-header">Chnage Password</h5>
-                        <div class="card-body">
-                          <!-- Connections -->
-                          <div class="d-flex mb-3">
-                              <div class="flex-grow-1 row">
-                                  <div class="col-9 mb-sm-0 mb-2">
-                                      <div class="row">
-                                          <div class="col-md-6">
-                                              <label for="current_password" class="form-label">Current Password <span style="color: red; font-size: 1.2em;">*</span></label>
-                                              <input type="password" class="form-control" id="current_password" placeholder="Enter current password">
-                                          </div>
-                                          <div class="col-md-6">
-                                              <label for="new_password" class="form-label">New Password <span style="color: red; font-size: 1.2em;">*</span></label>
-                                              <input type="password" class="form-control" id="new_password" placeholder="Enter new password">
-                                          </div>
-                                      </div>
-                                      <button class="btn btn-primary mt-3" id="chnage_password">Change Password</button>
-                                  </div>
-                              </div>
-                          </div>
-                          <!-- /Connections -->
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  &nbsp;
-                  <div class="card">
-                    <h5 class="card-header">Delete Account</h5>
-                    <div class="card-body">
-                      <div class="mb-3 col-12 mb-0">
-                        <div class="alert alert-warning">
-                          <h6 class="alert-heading fw-bold mb-1">Are you sure you want to delete your account?</h6>
-                          <p class="mb-0">Once you delete your account, there is no going back. Please be certain.</p>
-                        </div>
-                      </div>
-                      <form id="formAccountDeactivation" onsubmit="return false">
-                        <div class="form-check mb-3">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            name="accountActivation"
-                            id="accountActivation"
-                          disabled/>
-                          <label class="form-check-label" for="accountActivation"
-                            >I confirm my account deactivation</label
-                          >
-                        </div>
-                        <button type="submit" class="btn btn-danger deactivate-account" disabled>Deactivate Account</button>
-                      </form>
-                    </div>
-                  </div>
-                  </div>
+            <div class="container text-center pt-5">
+              <div class="misc-wrapper">
+                <h2 class="mb-2">You are under free plan!</h2>
+                <p class="mb-4">Connect with <a href="mailto:helpdesk.martechcloud@gmail.com">helpdesk.martechcloud@gmail.com</a> for more information.</p>
+                <a href="scoopxdashboard.html" class="btn btn-primary">Back to home</a>
+                <div class="mt-4">
+                  <img
+                    src="img/illustrations/girl-doing-yoga-light.png"
+                    alt="girl-doing-yoga-light"
+                    width="500"
+                    class="img-fluid"
+                    data-app-dark-img="illustrations/girl-doing-yoga-dark.png"
+                    data-app-light-img="illustrations/girl-doing-yoga-light.png"
+                  />
                 </div>
               </div>
             </div>
+          </div>
+          
+          
             <!-- / Content -->
 
     <!-- Core JS -->
@@ -677,10 +459,8 @@
     <script src="js/loginauthenticator.js"></script>
     <script src="ScoopX/scoopxloginauthenticator.js"></script>
     <script src="js/profile.js"></script>
-    <script src="js/chnagepass.js"></script>
 
     <script src="js/menu.js"></script>
-    <!-- <script src="ScoopX/whatsappincomingmessage.js"></script> -->
     <!-- endbuild -->
     <!-- Vendors JS -->
 

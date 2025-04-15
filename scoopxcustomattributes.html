@@ -1,17 +1,5 @@
 <!DOCTYPE html>
 
-<!-- =========================================================
-* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
-==============================================================
-
-* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
-* Created by: ThemeSelection
-* License: You must have a valid license purchased in order to legally use the theme for your project.
-* Copyright ThemeSelection (https://themeselection.com)
-
-=========================================================
- -->
-<!-- beautify ignore:start -->
 <html
   lang="en"
   class="light-style layout-menu-fixed"
@@ -48,7 +36,6 @@
     <link rel="stylesheet" href="css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="css/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="css/demo.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="libs/perfect-scrollbar/perfect-scrollbar.css" />
@@ -64,6 +51,24 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="js/config.js"></script>
+
+    <style>
+      .loader-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            display: none;
+        }
+    </style>
   </head>
 
   <body>
@@ -97,7 +102,7 @@
             </li>
 
             <!-- Layouts -->
-            <li class="menu-item">
+            <li class="menu-item active open">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
                 <div data-i18n="Layouts">Audience</div>
@@ -114,7 +119,7 @@
                     <div data-i18n="Without navbar">Add Contacts</div>
                   </a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item active">
                   <a href="scoopxcustomattributes.html" class="menu-link">
                     <div data-i18n="Without navbar">Custom Attributes</div>
                   </a>
@@ -186,13 +191,13 @@
             
             <!-- Misc -->
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Action</span></li>
-            <li class="menu-item active open">
+            <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-user"></i>
                 <div data-i18n="Misc">Account</div>
               </a>
               <ul class="menu-sub">
-                <li class="menu-item active">
+                <li class="menu-item">
                   <a href="scoopxsettings.html" class="menu-link">
                     <div data-i18n="Under Maintenance">Settings</div>
                   </a>
@@ -318,22 +323,6 @@
 
           <!-- / Navbar -->
 
-          <div
-                class="bs-toast toast toast-placement-ex m-2 bg-success bottom-0 end-0"
-                role="alert"
-                id = "box"
-                aria-live="assertive"
-                aria-atomic="true"
-              >
-              <div class="toast-header">
-                <i class="bx bx-bell me-2"></i>
-                <div class="me-auto fw-semibold">Martech Cloud</div>
-                    <small>0 mins ago</small>
-                </div>
-              <div id = "success" class="toast-body">
-                Green
-              </div>
-              </div>
 
           <!-- Content wrapper -->
           <div class="col-lg-3 col-md-6">
@@ -354,6 +343,25 @@
             </div>
           </div>
 
+          <div class="content-wrapper">
+            <!-- Content -->
+            <div
+            class="bs-toast toast toast-placement-ex m-2 bg-danger bottom-0 end-0"
+            role="alert"
+            id = "box2"
+            aria-live="assertive"
+            aria-atomic="true"
+          >
+            <div class="toast-header">
+              <i class="bx bx-bell me-2"></i>
+              <div class="me-auto fw-semibold">Martech Cloud</div>
+              <small>0 mins ago</small>
+            </div>
+            <div id = "almessage" class="toast-body">
+              Failed!
+            </div>
+          </div>
+
           <div
             class="bs-toast toast toast-placement-ex m-2 bg-success bottom-0 end-0"
             role="alert"
@@ -371,291 +379,129 @@
             </div>
           </div>
           
-          
-          <div class="col-lg-4 col-md-6">
-            <div class="mt-3">
-            </div>
-          </div>
 
-          <div
-            class="bs-toast toast toast-placement-ex m-2 bg-success bottom-0 end-0"
-            role="alert"
-            id = "box1"
-            aria-live="assertive"
-            aria-atomic="true"
-          >
-            <div class="toast-header">
-              <i class="bx bx-bell me-2"></i>
-              <div class="me-auto fw-semibold">Martech Cloud</div>
-              <small>0 mins ago</small>
-            </div>
-            <div id = "success" class="toast-body">
-              Contact Updated sucessfully!
-            </div>
-          </div>
-
-          <div
-            class="bs-toast toast toast-placement-ex m-2 bg-danger bottom-0 end-0"
-            role="alert"
-            id = "box2"
-            aria-live="assertive"
-            aria-atomic="true"
-          >
-            <div class="toast-header">
-              <i class="bx bx-bell me-2"></i>
-              <div class="me-auto fw-semibold">Martech Cloud</div>
-              <small>0 mins ago</small>
-            </div>
-            <div class="toast-body" id="almessage">
-              Failed!
-            </div>
-          </div>
-
-
-
-          <div class="content-wrapper">
-            <!-- Content -->
             <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="fw-bold py-3 mb-4">
-                <span class="text-muted fw-light">Account / </span> Settings
-              </h4>
+              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Audience /</span> Custom Attributes</h4>
 
               <div class="row">
                 <div class="col-md-12">
-                  <div class="row">
-                    <div class="col-md-6 col-12 mb-md-0 mb-4">
-                      <div class="card">
-                        <h5 class="card-header">Account Status</h5>
-                        <div class="card-body">
-                          <!-- Connections -->
-                          <div class="d-flex mb-3">
-                            <div class="flex-shrink-0">
-                              <img src="img/icons/brands/8.png" alt="google" class="me-3" height="30" />
-                            </div>
-                            <div class="flex-grow-1 row">
-                              <div class="col-9 mb-sm-0 mb-2">
-                                <h6 id="primaryprofileusername" class="mb-0"></h6>
-                                <small id="primaryprofilerole" class="text-muted"></small>
-                                <div><small class="text-muted" id="MartechIP"></small></div>
-                              </div>
-                              <div class="col-3 text-end">
-                                <div class="form-check form-switch">
-                                  <input class="form-check-input float-end" type="checkbox" role="switch" checked disabled/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- /Connections -->
-                        </div>
-                      </div>
-                      &nbsp;
-                      <div class="card">
-                        <h5 class="card-header">Account Details</h5>
-                        <div class="card-body">
-                          <!-- Connections -->
-                          <div class="d-flex mb-3">
-                            <div class="flex-grow-1 row">
-                              <div class="col-9 mb-sm-0 mb-2">
-                                <h6 class="mb-3" id="MartechName"><i class="fas fa-user"></i> <span></span></h6>
-                                <h6 class="mb-3" id="MartechEmail"><i class="fas fa-envelope"></i> <span></span></h6>
-                                <h6 class="mb-3" id="MartechPhone"><i class="fas fa-phone"></i> <span></span></h6>
-                                <h6 class="mb-3" id="industry"><i class="fas fa-internet"></i> <span></span></h6>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- /Connections -->
-                        </div>
-                      </div>
-                      &nbsp;
-                      <div class="card">
-                        <h5 class="card-header">Advanced Details</h5>
-                        <div class="card-body">
-                          <!-- Connections -->
-                          <div class="d-flex mb-3">
-                            <div class="flex-grow-1 row">
-                              <div class="col-9 mb-sm-0 mb-2">
-                                <h6 class="mb-3" id="first_primary"><i class="fas fa-user"></i> <span></span></h6>
-                                <h6 class="mb-3" id="second_primary"><i class="fas fa-user"></i> <span></span></h6>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- /Connections -->
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-12">
-                      <div class="card">
-                        <h5 class="card-header">Integrated Channels</h5>
-                        <div class="card-body">
-                          <!-- Social Accounts -->
-                          <div class="d-flex mb-3">
-                            <div class="flex-shrink-0">
-                              <img
-                                src="img/icons/brands/gmail.png"
-                                alt="facebook"
-                                class="me-3"
-                                height="30"
-                              />
-                            </div>
-                            <div class="flex-grow-1 row">
-                              <div class="col-8 col-sm-7 mb-sm-0 mb-2">
-                                <h6 class="mb-0">Email</h6>
-                                <a href="mailto:helpdesk.martechcloud@gmail.com" >helpdesk.martechcloud@gmail.com</a>
-                              </div>
-                              <div class="col-4 col-sm-5 text-end">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input float-end" type="checkbox" role="switch" checked disabled/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="d-flex mb-3">
-                            <div class="flex-shrink-0">
-                              <img
-                                src="img/icons/brands/sms.png"
-                                alt="twitter"
-                                class="me-3"
-                                height="30"
-                              />
-                            </div>
-                            <div class="flex-grow-1 row">
-                              <div class="col-8 col-sm-7 mb-sm-0 mb-2">
-                                <h6 class="mb-0">SMS</h6>
-                                <small class="text-muted">Not Connected</small>
-                              </div>
-                              <div class="col-4 col-sm-5 text-end">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input float-end" type="checkbox" role="switch" unchecked disabled/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="d-flex mb-3">
-                            <div class="flex-shrink-0">
-                              <img
-                                src="img/icons/brands/whatsapp.png"
-                                alt="dribbble"
-                                class="me-3"
-                                height="30"
-                              />
-                            </div>
-                            <div class="flex-grow-1 row">
-                              <div class="col-8 col-sm-7 mb-sm-0 mb-2">
-                                <h6 class="mb-0">WhatsApp</h6>
-                                <a href="tel:+918208710562" >+918208710562</a>
-                              </div>
-                              <div class="col-4 col-sm-5 text-end">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input float-end" type="checkbox" role="switch" checked disabled/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="d-flex mb-3">
-                            <div class="flex-shrink-0">
-                              <img
-                                src="img/icons/brands/instagram.png"
-                                alt="instagram"
-                                class="me-3"
-                                height="30"
-                              />
-                            </div>
-                            <div class="flex-grow-1 row">
-                              <div class="col-8 col-sm-7 mb-sm-0 mb-2">
-                                <h6 class="mb-0">instagram</h6>
-                                <a href="https://www.instagram.com/sai_thombare/" target="_blank">@sai_thombare</a>
-                              </div>
-                              <div class="col-4 col-sm-5 text-end">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input float-end" type="checkbox" role="switch" checked disabled/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="d-flex">
-                            <div class="flex-shrink-0">
-                              <img
-                                src="img/icons/brands/github.png"
-                                alt="behance"
-                                class="me-3"
-                                height="30"
-                              />
-                            </div>
-                            <div class="flex-grow-1 row">
-                              <div class="col-8 col-sm-7 mb-sm-0 mb-2">
-                                <h6 class="mb-0">Others</h6>
-                                <small class="text-muted">Not Connected</small>
-                              </div>
-                              <div class="col-4 col-sm-5 text-end">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input float-end" type="checkbox" role="switch" unchecked disabled/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- /Social Accounts -->
-                        </div>
-                      </div>
-                      &nbsp;
-                      <div class="card">
-                        <h5 class="card-header">Chnage Password</h5>
-                        <div class="card-body">
-                          <!-- Connections -->
-                          <div class="d-flex mb-3">
-                              <div class="flex-grow-1 row">
-                                  <div class="col-9 mb-sm-0 mb-2">
-                                      <div class="row">
-                                          <div class="col-md-6">
-                                              <label for="current_password" class="form-label">Current Password <span style="color: red; font-size: 1.2em;">*</span></label>
-                                              <input type="password" class="form-control" id="current_password" placeholder="Enter current password">
-                                          </div>
-                                          <div class="col-md-6">
-                                              <label for="new_password" class="form-label">New Password <span style="color: red; font-size: 1.2em;">*</span></label>
-                                              <input type="password" class="form-control" id="new_password" placeholder="Enter new password">
-                                          </div>
-                                      </div>
-                                      <button class="btn btn-primary mt-3" id="chnage_password">Change Password</button>
-                                  </div>
-                              </div>
-                          </div>
-                          <!-- /Connections -->
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  &nbsp;
-                  <div class="card">
-                    <h5 class="card-header">Delete Account</h5>
+                  <div class="card mb-4">
+                    <h5 class="card-header">Profile Details</h5>
+                    <!-- Account -->
                     <div class="card-body">
-                      <div class="mb-3 col-12 mb-0">
-                        <div class="alert alert-warning">
-                          <h6 class="alert-heading fw-bold mb-1">Are you sure you want to delete your account?</h6>
-                          <p class="mb-0">Once you delete your account, there is no going back. Please be certain.</p>
+                      <div class="loader-overlay" id="loader">Loading...</div>
+                      <div class="d-flex align-items-start align-items-sm-center gap-4">
+                        <img
+                          src="img/avatars/8.png"
+                          alt="user-avatar"
+                          class="d-block rounded"
+                          height="100"
+                          width="100"
+                          id="uploadedAvatar"
+                        />
+                        <div class="button-wrapper">
+
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="col-md-6 border border-primary rounded">
+                              <input
+                                class="form-control"
+                                type="text"
+                                id="CUSTOMER_ID"
+                                name="CUSTOMER_ID"
+                                placeholder="Customer ID/ Phone Number"
+                                autofocus
+                              />
+                            </div>
+                          
+                            <button type="button" class="btn btn-secondary account-image-reset">
+                              <i class="bx bx-reset d-block d-sm-none"></i>
+                              <span class="d-none d-sm-block">Get Details</span>
+                            </button>
+                          </div>
+                          &nbsp;
+
+                          <p class="text-muted mb-0">Only a valid customer ID/ phone number is acceptable.</p>
                         </div>
                       </div>
-                      <form id="formAccountDeactivation" onsubmit="return false">
-                        <div class="form-check mb-3">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            name="accountActivation"
-                            id="accountActivation"
-                          disabled/>
-                          <label class="form-check-label" for="accountActivation"
-                            >I confirm my account deactivation</label
-                          >
+                    </div>
+                    <hr class="my-0" />
+                    <div class="card-body">
+                      <form id="formAccountSettings" method="POST" onsubmit="return false">
+                        <div class="row">
+                          <div class="mb-3 col-md-6">
+                            <label class="form-label" for="usernamedetails" >CUSTOMER_ID</label>
+                            <input
+                              class="form-control"
+                              type="text"
+                              id="CUSTOMER_ID_FIELD"
+                              name="CUSTOMER_ID_FIELD"
+                              value=""
+                            disabled/>
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label class="form-label" for="usernamedetails" >REGISTRATION_DATE</label>
+                            <input
+                              class="form-control"
+                              type="text"
+                              id="REGISTRATION_DATE"
+                              name="REGISTRATION_DATE"
+                              value=""
+                            disabled/>
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="roledetails" class="form-label">CUSTOMER_NAME</label>
+                            <input
+                              class="form-control"
+                              type="text"
+                              id="CUSTOMER_NAME"
+                              name="CUSTOMER_NAME"
+                              value=""
+                              autofocus
+                              />
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="firstNamedetails" class="form-label">CUSTOMER_EMAIL</label>
+                            <input
+                              class="form-control"
+                              type="email"
+                              id="CUSTOMER_EMAIL"
+                              name="CUSTOMER_EMAIL"
+                              value=""
+                              oninput="validateemail(this)"
+                            />
+                            <small id="emailError" style="color: red; display: none;">Please enter a valid Email.</small>
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="lastNamedetails" class="form-label">CUSTOMER_PHONE</label>
+                            <input class="form-control" type="tel" name="CUSTOMER_PHONE" id="CUSTOMER_PHONE" value="" oninput="validatePhoneNumber(this)" />
+                            <small id="phoneError" style="color: red; display: none;">Please enter a valid phone number.</small>
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="emaildetails" class="form-label">AGE</label>
+                            <input
+                              class="form-control"
+                              type="number"
+                              id="AGE"
+                              name="AGE"
+                              value=""
+                              placeholder="" 
+                              /> 
+                          </div>
+                          <div class="mb-3 col-md-6">
+                          </div>
                         </div>
-                        <button type="submit" class="btn btn-danger deactivate-account" disabled>Deactivate Account</button>
+                        <div class="mt-2">
+                          <button type="submit" id ="submitbutton" class="btn btn-primary me-2"  >Update Profile</button>
+                        </div>
                       </form>
                     </div>
-                  </div>
-                  </div>
+                    <!-- /Account -->
                 </div>
               </div>
             </div>
             <!-- / Content -->
 
-    <!-- Core JS -->
+
     <script>
       function incomingmessage() {
         fetchAndDisplayMessages();
@@ -667,6 +513,23 @@
             fetchAndDisplayMessages();
         });
     </script> 
+
+    <script>
+      window.onload = function() {
+        let custom_attribute_cart = JSON.parse(sessionStorage.getItem('custom_attribute_cart')) || [];
+
+        if (custom_attribute_cart.length === 0) {
+            fetchDataAndStoreInCart();  // Ensure this function is defined
+        } else {
+            // Ensure it's properly converted to an array (if stored incorrectly)
+            if (!Array.isArray(custom_attribute_cart)) {
+                custom_attribute_cart = [custom_attribute_cart]; // Convert to an array if it's not already
+            }
+        }
+      };
+    </script>
+
+    <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="libs/jquery/jquery.js"></script>
     <script src="libs/popper/popper.js"></script>
@@ -677,16 +540,15 @@
     <script src="js/loginauthenticator.js"></script>
     <script src="ScoopX/scoopxloginauthenticator.js"></script>
     <script src="js/profile.js"></script>
-    <script src="js/chnagepass.js"></script>
 
     <script src="js/menu.js"></script>
-    <!-- <script src="ScoopX/whatsappincomingmessage.js"></script> -->
     <!-- endbuild -->
+
     <!-- Vendors JS -->
 
     <!-- Main JS -->
+    <script src="ScoopX/customattributes.js"></script>
     <script src="js/main.js"></script>
-
     <!-- Page JS -->
 
   </body>

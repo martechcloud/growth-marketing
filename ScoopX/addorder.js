@@ -960,7 +960,7 @@ document.getElementById('submitorder').addEventListener('click', async function 
                   entry[5] = Math.max(0, entry[5] - item.quantity); // Reduce quantity (ensure it doesn't go below 0)
               }
               else if (entry[6] === "LITERS") {  
-                entry[5] = Math.max(0, entry[5] - (item.quantity*0.50)); // Reduce quantity (ensure it doesn't go below 0)
+                entry[5] = Math.max(0, entry[5] - (item.quantity*0.05)); // Reduce quantity (ensure it doesn't go below 0)
             }
           });
   

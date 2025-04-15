@@ -1,17 +1,4 @@
 <!DOCTYPE html>
-
-<!-- =========================================================
-* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
-==============================================================
-
-* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
-* Created by: ThemeSelection
-* License: You must have a valid license purchased in order to legally use the theme for your project.
-* Copyright ThemeSelection (https://themeselection.com)
-
-=========================================================
- -->
-<!-- beautify ignore:start -->
 <html
   lang="en"
   class="light-style layout-menu-fixed"
@@ -48,7 +35,6 @@
     <link rel="stylesheet" href="css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="css/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="css/demo.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="libs/perfect-scrollbar/perfect-scrollbar.css" />
@@ -97,7 +83,7 @@
             </li>
 
             <!-- Layouts -->
-            <li class="menu-item">
+            <li class="menu-item active open">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
                 <div data-i18n="Layouts">Audience</div>
@@ -109,7 +95,7 @@
                     <div data-i18n="Without menu">Contact Master</div>
                   </a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item active">
                   <a href="scoopxaddcontacts.html" class="menu-link">
                     <div data-i18n="Without navbar">Add Contacts</div>
                   </a>
@@ -186,13 +172,13 @@
             
             <!-- Misc -->
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Action</span></li>
-            <li class="menu-item active open">
+            <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-user"></i>
                 <div data-i18n="Misc">Account</div>
               </a>
               <ul class="menu-sub">
-                <li class="menu-item active">
+                <li class="menu-item">
                   <a href="scoopxsettings.html" class="menu-link">
                     <div data-i18n="Under Maintenance">Settings</div>
                   </a>
@@ -318,22 +304,6 @@
 
           <!-- / Navbar -->
 
-          <div
-                class="bs-toast toast toast-placement-ex m-2 bg-success bottom-0 end-0"
-                role="alert"
-                id = "box"
-                aria-live="assertive"
-                aria-atomic="true"
-              >
-              <div class="toast-header">
-                <i class="bx bx-bell me-2"></i>
-                <div class="me-auto fw-semibold">Martech Cloud</div>
-                    <small>0 mins ago</small>
-                </div>
-              <div id = "success" class="toast-body">
-                Green
-              </div>
-              </div>
 
           <!-- Content wrapper -->
           <div class="col-lg-3 col-md-6">
@@ -353,7 +323,11 @@
                 </div>
             </div>
           </div>
-
+          
+          <div class="form-check form-switch mb-2 position-relative" style="padding-left: 80px; padding-top: 30px;">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" unchecked style="transform: scale(1.5);" />
+            <label class="form-check-label" for="flexSwitchCheckChecked" style="margin-left: 10px;">Custom Attributes</label>
+          </div>
           <div
             class="bs-toast toast toast-placement-ex m-2 bg-success bottom-0 end-0"
             role="alert"
@@ -367,30 +341,7 @@
               <small>0 mins ago</small>
             </div>
             <div id = "success" class="toast-body">
-              Details Updated Successfully!
-            </div>
-          </div>
-          
-          
-          <div class="col-lg-4 col-md-6">
-            <div class="mt-3">
-            </div>
-          </div>
-
-          <div
-            class="bs-toast toast toast-placement-ex m-2 bg-success bottom-0 end-0"
-            role="alert"
-            id = "box1"
-            aria-live="assertive"
-            aria-atomic="true"
-          >
-            <div class="toast-header">
-              <i class="bx bx-bell me-2"></i>
-              <div class="me-auto fw-semibold">Martech Cloud</div>
-              <small>0 mins ago</small>
-            </div>
-            <div id = "success" class="toast-body">
-              Contact Updated sucessfully!
+              New contact has been uploaded in the database sucessfully!
             </div>
           </div>
 
@@ -406,256 +357,266 @@
               <div class="me-auto fw-semibold">Martech Cloud</div>
               <small>0 mins ago</small>
             </div>
-            <div class="toast-body" id="almessage">
+            <div id = "almessage" class="toast-body">
               Failed!
             </div>
           </div>
 
-
-
-          <div class="content-wrapper">
-            <!-- Content -->
-            <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="fw-bold py-3 mb-4">
-                <span class="text-muted fw-light">Account / </span> Settings
-              </h4>
-
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="row">
-                    <div class="col-md-6 col-12 mb-md-0 mb-4">
-                      <div class="card">
-                        <h5 class="card-header">Account Status</h5>
-                        <div class="card-body">
-                          <!-- Connections -->
-                          <div class="d-flex mb-3">
-                            <div class="flex-shrink-0">
-                              <img src="img/icons/brands/8.png" alt="google" class="me-3" height="30" />
-                            </div>
-                            <div class="flex-grow-1 row">
-                              <div class="col-9 mb-sm-0 mb-2">
-                                <h6 id="primaryprofileusername" class="mb-0"></h6>
-                                <small id="primaryprofilerole" class="text-muted"></small>
-                                <div><small class="text-muted" id="MartechIP"></small></div>
-                              </div>
-                              <div class="col-3 text-end">
-                                <div class="form-check form-switch">
-                                  <input class="form-check-input float-end" type="checkbox" role="switch" checked disabled/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- /Connections -->
-                        </div>
-                      </div>
-                      &nbsp;
-                      <div class="card">
-                        <h5 class="card-header">Account Details</h5>
-                        <div class="card-body">
-                          <!-- Connections -->
-                          <div class="d-flex mb-3">
-                            <div class="flex-grow-1 row">
-                              <div class="col-9 mb-sm-0 mb-2">
-                                <h6 class="mb-3" id="MartechName"><i class="fas fa-user"></i> <span></span></h6>
-                                <h6 class="mb-3" id="MartechEmail"><i class="fas fa-envelope"></i> <span></span></h6>
-                                <h6 class="mb-3" id="MartechPhone"><i class="fas fa-phone"></i> <span></span></h6>
-                                <h6 class="mb-3" id="industry"><i class="fas fa-internet"></i> <span></span></h6>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- /Connections -->
-                        </div>
-                      </div>
-                      &nbsp;
-                      <div class="card">
-                        <h5 class="card-header">Advanced Details</h5>
-                        <div class="card-body">
-                          <!-- Connections -->
-                          <div class="d-flex mb-3">
-                            <div class="flex-grow-1 row">
-                              <div class="col-9 mb-sm-0 mb-2">
-                                <h6 class="mb-3" id="first_primary"><i class="fas fa-user"></i> <span></span></h6>
-                                <h6 class="mb-3" id="second_primary"><i class="fas fa-user"></i> <span></span></h6>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- /Connections -->
-                        </div>
-                      </div>
+          <div id="singleInputForm">
+            <div class="content-wrapper">
+              <!-- Content -->
+              <div class="container-xxl flex-grow-1 container-p-y">
+                <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Audience/</span> Add Contact </h4>
+                <!-- Basic Layout -->
+                <!-- Basic with Icons -->
+                <div class="col-xxl">
+                  <div class="card mb-4">
+                    <div class="card-header d-flex align-items-center justify-content-between">
+                      <h5 class="mb-0">Add Contact Details</h5>
+                      <small class="text-muted float-end"></small>
                     </div>
-                    <div class="col-md-6 col-12">
-                      <div class="card">
-                        <h5 class="card-header">Integrated Channels</h5>
-                        <div class="card-body">
-                          <!-- Social Accounts -->
-                          <div class="d-flex mb-3">
-                            <div class="flex-shrink-0">
-                              <img
-                                src="img/icons/brands/gmail.png"
-                                alt="facebook"
-                                class="me-3"
-                                height="30"
-                              />
-                            </div>
-                            <div class="flex-grow-1 row">
-                              <div class="col-8 col-sm-7 mb-sm-0 mb-2">
-                                <h6 class="mb-0">Email</h6>
-                                <a href="mailto:helpdesk.martechcloud@gmail.com" >helpdesk.martechcloud@gmail.com</a>
-                              </div>
-                              <div class="col-4 col-sm-5 text-end">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input float-end" type="checkbox" role="switch" checked disabled/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="d-flex mb-3">
-                            <div class="flex-shrink-0">
-                              <img
-                                src="img/icons/brands/sms.png"
-                                alt="twitter"
-                                class="me-3"
-                                height="30"
-                              />
-                            </div>
-                            <div class="flex-grow-1 row">
-                              <div class="col-8 col-sm-7 mb-sm-0 mb-2">
-                                <h6 class="mb-0">SMS</h6>
-                                <small class="text-muted">Not Connected</small>
-                              </div>
-                              <div class="col-4 col-sm-5 text-end">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input float-end" type="checkbox" role="switch" unchecked disabled/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="d-flex mb-3">
-                            <div class="flex-shrink-0">
-                              <img
-                                src="img/icons/brands/whatsapp.png"
-                                alt="dribbble"
-                                class="me-3"
-                                height="30"
-                              />
-                            </div>
-                            <div class="flex-grow-1 row">
-                              <div class="col-8 col-sm-7 mb-sm-0 mb-2">
-                                <h6 class="mb-0">WhatsApp</h6>
-                                <a href="tel:+918208710562" >+918208710562</a>
-                              </div>
-                              <div class="col-4 col-sm-5 text-end">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input float-end" type="checkbox" role="switch" checked disabled/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="d-flex mb-3">
-                            <div class="flex-shrink-0">
-                              <img
-                                src="img/icons/brands/instagram.png"
-                                alt="instagram"
-                                class="me-3"
-                                height="30"
-                              />
-                            </div>
-                            <div class="flex-grow-1 row">
-                              <div class="col-8 col-sm-7 mb-sm-0 mb-2">
-                                <h6 class="mb-0">instagram</h6>
-                                <a href="https://www.instagram.com/sai_thombare/" target="_blank">@sai_thombare</a>
-                              </div>
-                              <div class="col-4 col-sm-5 text-end">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input float-end" type="checkbox" role="switch" checked disabled/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="d-flex">
-                            <div class="flex-shrink-0">
-                              <img
-                                src="img/icons/brands/github.png"
-                                alt="behance"
-                                class="me-3"
-                                height="30"
-                              />
-                            </div>
-                            <div class="flex-grow-1 row">
-                              <div class="col-8 col-sm-7 mb-sm-0 mb-2">
-                                <h6 class="mb-0">Others</h6>
-                                <small class="text-muted">Not Connected</small>
-                              </div>
-                              <div class="col-4 col-sm-5 text-end">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input float-end" type="checkbox" role="switch" unchecked disabled/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- /Social Accounts -->
-                        </div>
-                      </div>
-                      &nbsp;
-                      <div class="card">
-                        <h5 class="card-header">Chnage Password</h5>
-                        <div class="card-body">
-                          <!-- Connections -->
-                          <div class="d-flex mb-3">
-                              <div class="flex-grow-1 row">
-                                  <div class="col-9 mb-sm-0 mb-2">
-                                      <div class="row">
-                                          <div class="col-md-6">
-                                              <label for="current_password" class="form-label">Current Password <span style="color: red; font-size: 1.2em;">*</span></label>
-                                              <input type="password" class="form-control" id="current_password" placeholder="Enter current password">
-                                          </div>
-                                          <div class="col-md-6">
-                                              <label for="new_password" class="form-label">New Password <span style="color: red; font-size: 1.2em;">*</span></label>
-                                              <input type="password" class="form-control" id="new_password" placeholder="Enter new password">
-                                          </div>
-                                      </div>
-                                      <button class="btn btn-primary mt-3" id="chnage_password">Change Password</button>
-                                  </div>
-                              </div>
-                          </div>
-                          <!-- /Connections -->
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  &nbsp;
-                  <div class="card">
-                    <h5 class="card-header">Delete Account</h5>
                     <div class="card-body">
-                      <div class="mb-3 col-12 mb-0">
-                        <div class="alert alert-warning">
-                          <h6 class="alert-heading fw-bold mb-1">Are you sure you want to delete your account?</h6>
-                          <p class="mb-0">Once you delete your account, there is no going back. Please be certain.</p>
+                      <form id="dataForm1">
+                        <div class="row mb-3">
+                          <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">CUSTOMER ID</label>
+                          <div class="col-sm-10">
+                            <div class="input-group input-group-merge">
+                              <span id="basic-icon-default-fullname2" class="input-group-text"
+                                ><i class="bx bx-lock"></i
+                              ></span>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="key"
+                                placeholder="  XXXXXX"
+                                aria-label="xxxx"
+                                aria-describedby="basic-icon-default-fullname2"
+                              disabled/>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                      <form id="formAccountDeactivation" onsubmit="return false">
-                        <div class="form-check mb-3">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            name="accountActivation"
-                            id="accountActivation"
-                          disabled/>
-                          <label class="form-check-label" for="accountActivation"
-                            >I confirm my account deactivation</label
-                          >
+                        <div class="row mb-3">
+                          <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Name <span style="color: red; font-size: 1.2em;">*</span></label>
+                          <div class="col-sm-10">
+                            <div class="input-group input-group-merge">
+                              <span id="basic-icon-default-fullname2" class="input-group-text"
+                                ><i class="bx bx-user"></i
+                              ></span>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="name"
+                                placeholder="Enter Name"
+                                aria-label="John Doe"
+                                aria-describedby="basic-icon-default-fullname2"
+                              required/>
+                            </div>
+                          </div>
                         </div>
-                        <button type="submit" class="btn btn-danger deactivate-account" disabled>Deactivate Account</button>
+                        <div class="row mb-3">
+                          <label class="col-sm-2 col-form-label" for="basic-icon-default-phone">PHONE NUMBER <span style="color: red; font-size: 1.2em;">*</span> </label>
+                          <div class="col-sm-10">
+                            <div class="input-group input-group-merge">
+                              <span id="basic-icon-default-phone2" class="input-group-text"
+                                ><i class="bx bx-phone"></i
+                              ></span>
+                              <input
+                                type="tel"
+                                class="form-control"
+                                id="number"
+                                oninput="validatePhoneNumber(this)"
+                                placeholder="Enter Phone Number"
+                                aria-label="John Doe"
+                                aria-describedby="basic-icon-default-phone2"
+                              required/>
+                            </div>
+                            <small id="phoneError" style="color: red; display: none; margin-left: 40px;">
+                              Please enter a valid phone number.
+                            </small>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <label class="col-sm-2 col-form-label" for="basic-icon-default-email">Email</label>
+                          <div class="col-sm-10">
+                            <div class="input-group input-group-merge">
+                              <span class="input-group-text"><i class="bx bx-envelope"></i></span>
+                              <input
+                                type="text"
+                                id="email"
+                                oninput="validateemail(this)"
+                                class="form-control"
+                                placeholder="Enter Email Address"
+                                aria-label="john.doe"
+                                aria-describedby="basic-icon-default-email2"
+                              />
+                            </div>
+                            <small id="emailError" style="color: red; display: none; margin-left: 40px;">
+                              Please enter a valid Email.
+                            </small>
+                          </div>
+                        </div>
+                        <div class="row justify-content-end">
+                          <div class="col-sm-10">
+                            <button id = "submitbutton1" type="submit" class="btn btn-primary">Add Contact</button>
+                          </div>
+                        </div>
                       </form>
                     </div>
-                  </div>
                   </div>
                 </div>
               </div>
             </div>
             <!-- / Content -->
+          </div>
 
-    <!-- Core JS -->
+          <div id="uploadForm" style="display: none;">
+            <div class="content-wrapper">
+              <!-- Content -->
+              <div class="container-xxl flex-grow-1 container-p-y">
+                <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Audience/</span> Add Contact </h4>
+                <!-- Basic Layout -->
+                <!-- Basic with Icons -->
+                <div class="col-xxl">
+                  <div class="card mb-4">
+                    <div class="card-header d-flex align-items-center justify-content-between">
+                      <h5 class="mb-0">Add Contact Details</h5>
+                      <small class="text-muted float-end"></small>
+                    </div>
+                    <div class="card-body">
+                      <form id="dataForm2">
+                        <div class="row mb-3">
+                          <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">CUSTOMER ID</label>
+                          <div class="col-sm-10">
+                            <div class="input-group input-group-merge">
+                              <span id="basic-icon-default-fullname2" class="input-group-text"
+                                ><i class="bx bx-lock"></i
+                              ></span>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="key1"
+                                placeholder="  XXXXXX"
+                                aria-label="John Doe"
+                                aria-describedby="basic-icon-default-fullname2"
+                              disabled/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Name <span style="color: red; font-size: 1.2em;">*</span> </label>
+                          <div class="col-sm-10">
+                            <div class="input-group input-group-merge">
+                              <span id="basic-icon-default-fullname2" class="input-group-text"
+                                ><i class="bx bx-user"></i
+                              ></span>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="name1"
+                                placeholder="Enter Name"
+                                aria-label="John Doe"
+                                aria-describedby="basic-icon-default-fullname2"
+                              required/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <label class="col-sm-2 col-form-label" for="basic-icon-default-phone">PHONE NUMBER <span style="color: red; font-size: 1.2em;">*</span> </label>
+                          <div class="col-sm-10">
+                            <div class="input-group input-group-merge">
+                              <span id="basic-icon-default-phone2" class="input-group-text"
+                                ><i class="bx bx-phone"></i
+                              ></span>
+                              <input
+                                type="tel"
+                                pattern="[0-9]{12}"
+                                class="form-control"
+                                id="number1"
+                                oninput="validatePhoneNumber(this)"
+                                placeholder="Enter Phone Number"
+                                aria-label="John Doe"
+                                aria-describedby="basic-icon-default-phone2"
+                              required/>
+                            </div>
+                            <small id="phoneError2" style="color: red; display: none; margin-left: 40px;">
+                              Please enter a valid phone number.
+                            </small>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <label class="col-sm-2 col-form-label" for="basic-icon-default-email">Email</label>
+                          <div class="col-sm-10">
+                            <div class="input-group input-group-merge">
+                              <span class="input-group-text"><i class="bx bx-envelope"></i></span>
+                              <input
+                                type="email"
+                                id="email1"
+                                oninput="validateemail(this)"
+                                class="form-control"
+                                placeholder="Enter Email Address"
+                                aria-label="john.doe"
+                                aria-describedby="basic-icon-default-email2"
+                              />
+                            </div>
+                            <small id="emailError2" style="color: red; display: none; margin-left: 40px;">
+                              Please enter a valid Email.
+                            </small>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <label class="col-sm-2 col-form-label" for="basic-icon-default-email">Age</label>
+                          <div class="col-sm-10">
+                            <div class="input-group input-group-merge">
+                              <span class="input-group-text"><i class="bx bx-user"></i></span>
+                              <input
+                                type="number"
+                                id="age1"
+                                class="form-control"
+                                placeholder="Enter Age"
+                                aria-label="john.doe"
+                                aria-describedby="basic-icon-default-email2"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row justify-content-end">
+                          <div class="col-sm-10">
+                            <button id="submitbutton2" type="submit" class="btn btn-primary">Add Contact</button>  
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- / Content -->
+          </div>
+
+          <script>
+            document.getElementById("flexSwitchCheckChecked").addEventListener("change", function() {
+              var singleInputForm = document.getElementById("singleInputForm");
+              var uploadForm = document.getElementById("uploadForm");
+          
+              if (this.checked) {
+                // If toggle is checked, show singleInputForm and hide uploadForm
+                singleInputForm.style.display = "none";
+                uploadForm.style.display = "block";
+              } else {
+                // If toggle is unchecked, show uploadForm and hide singleInputForm
+                uploadForm.style.display = "none";
+                singleInputForm.style.display = "block";
+              }
+            });
+          </script>
+
+    <script>
+      document.getElementById("dataForm2").addEventListener("submit", function(e) {
+        e.preventDefault();
+        addcontact2(); 
+      });
+    </script>
+
     <script>
       function incomingmessage() {
         fetchAndDisplayMessages();
@@ -667,27 +628,32 @@
             fetchAndDisplayMessages();
         });
     </script> 
+
+    <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="libs/jquery/jquery.js"></script>
     <script src="libs/popper/popper.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
     <script src="js/logout.js"></script>
     <script src="js/loginauthenticator.js"></script>
     <script src="ScoopX/scoopxloginauthenticator.js"></script>
     <script src="js/profile.js"></script>
-    <script src="js/chnagepass.js"></script>
 
+    <script src="libs/perfect-scrollbar/perfect-scrollbar.js"></script>
     <script src="js/menu.js"></script>
-    <!-- <script src="ScoopX/whatsappincomingmessage.js"></script> -->
     <!-- endbuild -->
+
     <!-- Vendors JS -->
+    <script src="libs/apex-charts/apexcharts.js"></script>
 
     <!-- Main JS -->
     <script src="js/main.js"></script>
+    <script src="ScoopX/addcontacts.js"></script>
 
     <!-- Page JS -->
 
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>
 </html>
