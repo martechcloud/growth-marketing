@@ -214,7 +214,7 @@ function addToCart(category, index) {
       const item = items[category][index];
       console.log(item)
 
-      if (item.quantity < 1) {  // Correct syntax
+      if (item.quantity < 0.01) {  // Correct syntax
         alertMessage.textContent = "The item is out of stock!";
         errorMessage.style.display = "block"; // Show error message
         setTimeout(() => {
