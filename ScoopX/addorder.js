@@ -499,7 +499,7 @@ function setActive(element) {
     const tableData = sessionStorage.getItem(tableNumber);
     if (tableData) {
         resetBilling();
-        showItems('');
+        showItems('home');
         const billingData = JSON.parse(tableData);
 
         billingData.items.forEach((item) => {
