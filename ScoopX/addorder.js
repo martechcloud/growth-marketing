@@ -229,6 +229,7 @@ function addToCart(category, index) {
       } else {
           cart[item.name].quantity++; // Increase quantity if already in cart
       }
+      console.log(cart)
 
       updateBilling(); // Call function to update the billing details
   }
@@ -445,6 +446,8 @@ document.getElementById('draft-btn').addEventListener('click', function() {
 
       // Store the data in sessionStorage using the table number as the key
       sessionStorage.setItem(activePage, JSON.stringify(billingData));
+      console.log(billingData)
+
 
       let complimentaryItems = [];
       let waveDiscounts = [];
@@ -840,21 +843,34 @@ document.getElementById('submitorder').addEventListener('click', async function 
   const alertMessagegreen = document.getElementById('almessage');
 
   // Capture form data
-  const customerName = document.getElementById('nameSmall').value;
-  const phoneNumber = document.getElementById('phoneSmall').value;
-  const paymentMethod = document.getElementById('paymentSmall').value;
-  const customerEmail = document.getElementById('emailSmall').value;
+  let customerName = document.getElementById('nameSmall').value;
+  let phoneNumber = document.getElementById('phoneSmall').value;
+  let paymentMethod = document.getElementById('paymentSmall').value;
+  let customerEmail = document.getElementById('emailSmall').value;
 
   // Optional: Validation example
-  if (!customerName || !phoneNumber || !paymentMethod) {
-    alertMessage.textContent = "All fields are required!";
-    errorMessage.style.display = "block"; // Show error message
-    resetSubmitButton(submitButton);
-    setTimeout(() => {
-      errorMessage.style.display = "none";
-    }, 3000);
-    return
+  //if (!customerName || !phoneNumber || !paymentMethod) {
+  //  alertMessage.textContent = "All fields are required!";
+  //  errorMessage.style.display = "block"; // Show error message
+  //  resetSubmitButton(submitButton);
+  //  setTimeout(() => {
+  //    errorMessage.style.display = "none";
+  //  }, 3000);
+  //  return
+  //}
+
+  if (!customerName ) {
+    customerName = "Customer"
   }
+
+  if (!phoneNumber ) {
+    phoneNumber = "000000000000"
+  }
+
+  if (!paymentMethod ) {
+    paymentMethod = "Cash"
+  }
+
 
   // Capture dynamically generated table data
   const tableRows = document.querySelectorAll('#billing tbody tr');
