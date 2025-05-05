@@ -64,6 +64,35 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="js/config.js"></script>
+
+    <style>
+      #loader-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.8); /* semi-transparent background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+    
+      .spinner {
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid #3498db;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 1s linear infinite;
+      }
+    
+      @keyframes spin {
+        0%   { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
   </head>
 
   <body>
@@ -260,6 +289,11 @@
                     <span class="tf-icons bx bx-bell"></span>
                   </button>
                 </li>
+                <li class="nav-item lh-1 me-3">
+                  <button type="button" class="btn rounded-pill btn-icon btn-outline-secondary" onclick="contactmaster_cart1();" title="Refresh">
+                    <span class="tf-icons bx bx-refresh"></span>
+                  </button>
+                </li>
                 <!-- User -->
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
@@ -365,6 +399,10 @@
             </div>
           </div>
 
+          <div id="loader-overlay" style="display: none;">
+            <div class="spinner"></div>
+          </div>
+
 
           <div
             class="bs-toast toast toast-placement-ex m-2 bg-success bottom-0 end-0"
@@ -415,7 +453,7 @@
                             You have done <span class="fw-bold">₹0</span> sales today. Dive into detailed customer personas to unlock deeper insights. 🔍🚀
                           </p>
 
-                          <a href="scoopxsegments.html" class="btn btn-sm btn-outline-primary">View Personas</a>
+                          <a href="martechcloudsegments.html" class="btn btn-sm btn-outline-primary">View Personas</a>
                         </div>
                       </div>
                       <div class="col-sm-5 text-center text-sm-left">
@@ -785,6 +823,16 @@
         });
     </script>
 
+    <script>
+      function showLoader() {
+        document.getElementById('loader-overlay').style.display = 'flex';
+      }
+
+      function hideLoader() {
+        document.getElementById('loader-overlay').style.display = 'none';
+      }
+    </script>
+
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="libs/jquery/jquery.js"></script>
@@ -805,6 +853,7 @@
     <script src="js/logout.js"></script>
     <script src="js/loginauthenticator.js"></script>
     <script src="ScoopX/scoopxloginauthenticator.js"></script>
+    <script src="ScoopX/hardrest.js"></script>
     <script src="js/profile.js"></script>
 
     <script src="ScoopX/dashboard.js"></script>
