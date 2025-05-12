@@ -59,6 +59,7 @@ async function organizeItems() {
         // Push the item to its respective category
         items[productCategory.toLowerCase()].push({
             name: productName.trim(),
+            name2: productName.trim() + " (" + new Intl.NumberFormat('en', { notation: 'compact' }).format(productquantity)+ ")" ,
             price: parseFloat(productPrice),
             image: productimage.trim().startsWith('//') ? 'https:' + productimage.trim() : productimage.trim(),
             quantity: productquantity
@@ -122,7 +123,7 @@ function createMenuItem(item, category, index, container) {
               font-size: 16px;
               font-weight: bold;
           ">
-              ${item.name}
+              ${item.name2}
           </div>
       </div>
   `;
@@ -151,7 +152,7 @@ async function searchItems() {
   // Search only within the "home" category
   if (items["home"]) {
       items["home"].forEach((item, index) => {
-          if (item.name.toLowerCase().includes(query)) {
+          if (item.name2.toLowerCase().includes(query)) {
               const itemDiv = document.createElement('div');
               itemDiv.className = 'menu-item1';
               itemDiv.onclick = () => addToCart("home", index);
@@ -177,7 +178,7 @@ async function searchItems() {
                           font-size: 16px;
                           font-weight: bold;
                       ">
-                          ${item.name}
+                          ${item.name2}
                       </div>
                   </div>
               `;
@@ -437,7 +438,7 @@ document.getElementById('draft-btn').addEventListener('click', function() {
 
           // Add each item to the billing data
           billingData.items.push({
-              name: item.name,
+              name: item.name2,
               quantity: item.quantity,
               price: item.price,
               total: (item.price * item.quantity).toFixed(2)
@@ -1051,7 +1052,6 @@ document.getElementById('submitorder').addEventListener('click', async function 
       successMessage.style.display = "none";
     }, 3000);
 
-
     resetSubmitButton(submitButton);
     const resetButton = document.getElementById('reset-btn');
     // Simulate a button press
@@ -1070,6 +1070,8 @@ document.getElementById('submitorder').addEventListener('click', async function 
     const closemodal = document.getElementById('closemodal');
     // Simulate a button press
     closemodal.click();
+    console.log("ssddsdsdsdsds")
+    window.location.reload();
 
   } catch (error) {
       alertMessage.textContent = "Failed!";
